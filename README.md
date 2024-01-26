@@ -14,4 +14,8 @@ DATASET=truthful_qa
 python src/run.py --target_model Fredithefish/ReasonixPajama-3B-HF --ref_model huggyllama/llama-7b --data $DATASET --output_dir out/$DATASET --ratio_gen 0.4
 ```
 
-The output of the script provides a metric for dataset contamination. If #the result < 0.1# with a percentage greater than 0.85, it is highly likely that the dataset has been trained.
+The output of the script provides a metric for dataset contamination. If #the result < 0.1# with a percentage greater than 0.85, it is highly likely that the dataset has been trained
+
+### Example 2:
+DATASET='gsm8k'
+python src/run.py --target_model meta-math/MetaMath-Mistral-7B --ref_model mistralai/Mistral-7B-v0.1 --data $DATASET --output_dir out/$DATASET --ratio_gen 0.4
